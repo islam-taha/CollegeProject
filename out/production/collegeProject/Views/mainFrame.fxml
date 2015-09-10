@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="565.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.mainFrame">
+  <children>
+    <AnchorPane blendMode="SRC_OVER" layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="565.0" styleClass="mainWindow">
+      <children>
+        <Label fx:id="userNameLabel" layoutX="107.0" layoutY="187.0" prefWidth="85.0" text="User Name:" textFill="WHITE" />
+        <Label fx:id="passwordLabel" layoutX="107.0" layoutY="241.0" prefWidth="71.0" text="Password:" textFill="WHITE" />
+        <Label blendMode="ADD" focusTraversable="true" graphicTextGap="6.0" layoutX="200.0" layoutY="51.0" prefHeight="59.0" prefWidth="200.0" text="Welcome to My Project" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+          <font>
+            <Font name="Monaco" size="13.0" />
+          </font>
+        </Label>
+        <TextField fx:id="userName" alignment="CENTER_LEFT" disable="false" editable="true" focusTraversable="true" layoutX="222.0" layoutY="184.0" prefWidth="200.0" promptText="Enter your name" styleClass="Input" text="" visible="true" />
+        <Button fx:id="loginButton" layoutX="176.0" layoutY="312.0" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="22.0" prefWidth="85.0" styleClass="Buttons" text="Login">
+          <font>
+            <Font name="System Bold" size="13.0" />
+          </font>
+        </Button>
+        <PasswordField fx:id="userPassword" layoutX="222.0" layoutY="241.0" prefWidth="200.0" promptText="Enter your password" styleClass="Input" />
+        <Label fx:id="sorryLabel" disable="false" layoutX="201.0" layoutY="363.0" text="Sorry, wrong credentials!!" textFill="RED" visible="false" />
+        <TextField fx:id="filePathOnBrowsing" layoutX="222.0" layoutY="143.0" prefWidth="200.0" styleClass="Input" />
+        <Button layoutX="107.0" layoutY="143.0" mnemonicParsing="false" onAction="#OnClickBrowse" styleClass="Buttons" text="Browse" />
+        <Button layoutX="322.0" layoutY="312.0" mnemonicParsing="false" onAction="#OnClickExit" prefWidth="85.0" styleClass="Buttons" text="Exit" />
+      </children>
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </AnchorPane>
+  </children>
+</AnchorPane>

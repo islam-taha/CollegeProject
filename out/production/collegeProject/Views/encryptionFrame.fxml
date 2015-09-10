@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="617.0" styleClass="mainWindow" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.EncryptionProject">
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="0.0" minHeight="149.0" mouseTransparent="false" pickOnBounds="true" prefHeight="614.0" prefWidth="617.0" visible="true">
+      <children>
+        <Label layoutX="14.0" layoutY="39.0" text="Encryption-Decryption" textFill="WHITE">
+          <font>
+            <Font name="Monaco" size="13.0" fx:id="x1" />
+          </font>
+        </Label>
+        <TextField editable="false" fx:id="filePath" layoutX="14.0" layoutY="86.0" prefWidth="382.0" styleClass="listValue, Input" />
+        <TextField fx:id="keyValue" layoutX="14.0" layoutY="124.0" prefWidth="382.0" styleClass="listValue, Input" />
+        <CheckBox fx:id="encBox" font="$x1" layoutX="14.0" layoutY="158.0" mnemonicParsing="false" onAction="#OnCheckEncrypt" text="Encrypt" textFill="WHITE" />
+        <CheckBox fx:id="decBox" font="$x1" layoutX="309.0" layoutY="158.0" mnemonicParsing="false" onAction="#OnCheckDecrypt" text="Decrypt" textFill="WHITE" />
+        <Button fx:id="browseButton" layoutX="403.0" layoutY="86.0" mnemonicParsing="false" onAction="#OnClickBrowse" styleClass="Buttons" text="Browse" />
+        <Label disable="false" font="$x1" layoutX="418.0" layoutY="128.0" text="Key" textAlignment="CENTER" textFill="WHITE" textOverrun="ELLIPSIS" underline="false">
+          <effect>
+            <Glow />
+          </effect>
+        </Label>
+        <Button fx:id="encDecButton" layoutX="485.0" layoutY="67.0" mnemonicParsing="false" onAction="#OnClickEncDec" prefHeight="65.0" prefWidth="102.0" styleClass="Buttons" text="Perform" />
+        <Button fx:id="saveAsButton" layoutX="497.0" layoutY="153.0" mnemonicParsing="false" onAction="#OnClickSaveAs" styleClass="Buttons" text="Save As" />
+        <ProgressIndicator fx:id="encDecIndicator" layoutX="283.0" layoutY="251.0" progress="0.0" visible="false" />
+        <TextArea fx:id="showFileArea" editable="false" prefHeight="360.0" prefWidth="284.0" styleClass="listValue" wrapText="true" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="319.0" AnchorPane.topAnchor="207.0" />
+        <TextArea fx:id="decArea" editable="false" layoutX="308.0" layoutY="207.0" prefHeight="360.0" prefWidth="292.0" styleClass="listValue" wrapText="true" />
+        <Button layoutX="124.0" layoutY="580.0" mnemonicParsing="false" onAction="#OnClickBack" styleClass="Buttons" text="Back" />
+        <Button layoutX="422.0" layoutY="581.0" mnemonicParsing="false" onAction="#OnClickExit" styleClass="Buttons" text="Exit" />
+      </children>
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>

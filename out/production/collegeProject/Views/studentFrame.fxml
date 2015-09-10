@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0000999999975" prefWidth="1220.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.StudentProject">
+  <children>
+    <TitledPane animated="false" collapsible="false" disable="false" focusTraversable="true" layoutX="0.0" layoutY="0.0" prefHeight="481.0001220703125" prefWidth="450.0" text="Course" visible="true">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="mainWindow">
+          <children>
+            <Label layoutX="28.0" layoutY="42.0" prefHeight="23.0" prefWidth="116.0" text="Course Name:" textFill="WHITE">
+              <font>
+                <Font name="Monaco" size="13.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label font="$x1" layoutX="28.0" layoutY="98.0" prefWidth="102.0" text="Hours:" textFill="WHITE" />
+            <TextField fx:id="courseNameField" layoutX="175.0" layoutY="43.0" prefWidth="200.0" styleClass="Input" />
+            <TextField fx:id="courseHoursField" layoutX="175.0" layoutY="95.0" prefWidth="200.0" styleClass="Input" />
+            <Button fx:id="addCourseButton" layoutX="67.0" layoutY="168.0" mnemonicParsing="false" onAction="#OnClickAddCourse" styleClass="Buttons" text="Add Course" />
+            <Button fx:id="listAvailableCoursesButton" layoutX="189.0" layoutY="168.0" mnemonicParsing="false" onAction="#OnClickListAvailableCourses" styleClass="Buttons" text="List Available Courses" />
+            <TitledPane animated="false" collapsible="false" prefHeight="239.49993896484375" prefWidth="446.0" text="List of Available Courses" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="216.5">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TextArea fx:id="courseListArea" editable="false" prefHeight="214.0" prefWidth="442.0" styleClass="listValue" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" collapsible="false" layoutX="450.0" layoutY="0.0" prefHeight="482.0" prefWidth="386.0" text="Student">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="376.0" styleClass="mainWindow">
+          <children>
+            <Label font="$x1" layoutX="46.0" layoutY="40.0" prefHeight="22.000099999997474" prefWidth="49.0" text="ID:" textFill="WHITE" />
+            <Label font="$x1" layoutX="46.0" layoutY="97.0" text="Name:" textFill="WHITE" />
+            <TextField fx:id="studentIdField" layoutX="152.0" layoutY="41.0" prefWidth="200.0" styleClass="Input" />
+            <TextField fx:id="studentNameField" layoutX="152.0" layoutY="91.0" prefWidth="200.0" styleClass="Input" />
+            <Label font="$x1" layoutX="46.0" layoutY="147.0" text="Course" textFill="WHITE" />
+            <Button fx:id="addStudentWithCourseButton" alignment="CENTER" disable="false" layoutX="111.0" layoutY="218.0" mnemonicParsing="false" onAction="#OnClickAddStudentWithCourse" prefWidth="161.0" styleClass="Buttons" text="Add" visible="true" />
+            <Label fx:id="idAndNameLabel" layoutX="102.0" layoutY="181.0" minHeight="11.0" prefHeight="22.0" prefWidth="179.0" text="Please enter valid id &amp; name!" textFill="RED" underline="false" visible="false" />
+            <Button fx:id="statisticsButton" layoutX="66.0" layoutY="263.0" mnemonicParsing="false" onAction="#OnClickStatisticsButton" prefHeight="67.0" prefWidth="251.0" styleClass="Buttons" text="Statistics" />
+            <Button layoutX="66.0" layoutY="391.0" mnemonicParsing="false" onAction="#OnClickBack" styleClass="Buttons" text="Back" />
+            <Button layoutX="253.0" layoutY="391.0" mnemonicParsing="false" onAction="#OnClickExit" styleClass="Buttons" text="Exit" />
+            <ComboBox fx:id="courseListMenu" layoutX="152.0" layoutY="147.0" prefWidth="200.0" style="-fx-background-color: blanchedalmond" />
+            <Button layoutX="125.0" layoutY="353.0" mnemonicParsing="false" onAction="#OnClickStudentStats" styleClass="Buttons" text="Students-stats" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" collapsible="false" layoutX="835.0" layoutY="0.0" minWidth="386.0" prefHeight="482.0" prefWidth="386.0" text="Statistics">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="382.0" styleClass="mainWindow">
+          <children>
+            <AnchorPane layoutX="0.0" layoutY="145.0" prefHeight="309.0" prefWidth="383.0" visible="true">
+              <children>
+                <PieChart id="PieChart" fx:id="pieChart" disable="false" focusTraversable="true" layoutX="-3.0" layoutY="95.0" prefHeight="218.0" prefWidth="386.0" visible="true" />
+              </children>
+            </AnchorPane>
+            <BarChart fx:id="barChart" alternativeColumnFillVisible="false" barGap="4.0" layoutX="0.0" layoutY="0.0" legendSide="BOTTOM" legendVisible="true" prefHeight="239.5" prefWidth="383.0" titleSide="TOP" visible="true">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis prefHeight="272.0" side="LEFT" />
+              </yAxis>
+            </BarChart>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>

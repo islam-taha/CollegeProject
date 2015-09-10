@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.9998779296875" prefWidth="600.0" styleClass="mainWindow" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.secondFrame">
+  <children>
+    <Button fx:id="goToEncryptionProject" layoutX="13.0" layoutY="70.0" mnemonicParsing="false" onAction="#onClickEncryptionProject" prefWidth="271.0" styleClass="Buttons" text="Encryption-Project" />
+    <Button fx:id="goToStudentProject" layoutX="315.0" layoutY="70.0" mnemonicParsing="false" onAction="#onClickStudentProject" prefWidth="271.0" styleClass="Buttons" text="Student-Project" />
+    <TextArea editable="false" layoutX="128.0" layoutY="139.0" prefHeight="93.0" prefWidth="345.0" text="1. Islam Taha Mohamed&#10;&#10;Test-Java Project2015 sec(1)" wrapText="true" />
+    <Label layoutX="133.0" layoutY="107.0" text="INFO" textFill="WHITE" />
+    <Button layoutX="117.0" layoutY="257.0" mnemonicParsing="false" onAction="#OnClickBack" styleClass="Buttons" text="Back" />
+    <Button layoutX="419.0" layoutY="257.0" mnemonicParsing="false" onAction="#OnClickExit" styleClass="Buttons" text="Exit" />
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>

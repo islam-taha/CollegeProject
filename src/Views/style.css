@@ -1,0 +1,61 @@
+.mainWindow {
+    -fx-background-color: rgba(167, 167, 167, 0.27);
+    -fx-animated: true;
+}
+
+.Buttons {
+    -fx-background-color: blanchedalmond;
+    -fx-font-family: Monaco;
+    -fx-background-radius: 10;
+}
+
+.Buttons:pressed {
+    -fx-background-color: darkorange;
+}
+
+.Buttons:focused {
+    -fx-background-color: darkorange;
+}
+
+.Buttons:hover {
+    -fx-background-color: darkcyan;
+}
+
+.listValue {
+    -fx-background-color: blanchedalmond;
+    -fx-border-color: black;
+    -fx-font-family: Monaco;
+}
+
+.listValue:focused {
+    -fx-background-color: -fx-focus-color, transparent, blanchedalmond;
+}
+
+.listValue:hover {
+    -fx-background-color: -fx-focus-color, -fx-text-box-border, blanchedalmond;
+}
+
+.Labels {
+    -fx-background-color: blanchedalmond;
+}
+
+.axis {
+    -fx-fill: white;
+    -fx-background-color:  rgba(167, 167, 167, 0.27);
+    -fx-tick-label-fill: white;
+}
+
+.bar-chart {
+    -fx-fill:  rgba(167, 167, 167, 0.27);
+    -fx-background-color:  rgba(167, 167, 167, 0.27);
+}
+
+.Input {
+    -fx-background-color: blanchedalmond;
+}
+
+.text-area .content {
+    -fx-background-color: blanchedalmond;
+}
+
+
