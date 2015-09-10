@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button fx:id="goToEncryptionProject" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" onAction="#onClickEncryptionProject" prefWidth="271.0" text="Encryption-Project" />
+    <Button fx:id="goToStudentProject" layoutX="315.0" layoutY="191.0" mnemonicParsing="false" onAction="#onClickStudentProject" prefWidth="271.0" text="Student-Project" />
+  </children>
+</AnchorPane>

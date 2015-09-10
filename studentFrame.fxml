@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0000999999975" prefWidth="1220.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <TitledPane animated="false" collapsible="false" disable="false" focusTraversable="true" layoutX="0.0" layoutY="0.0" prefHeight="481.0001220703125" prefWidth="450.0" text="Course" visible="true">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <Label layoutX="28.0" layoutY="42.0" prefHeight="23.0" prefWidth="116.0" text="Course Name:" />
+            <Label layoutX="28.0" layoutY="98.0" prefWidth="102.0" text="Hours:" />
+            <TextField fx:id="courseNameField" layoutX="175.0" layoutY="43.0" prefWidth="200.0" />
+            <TextField fx:id="courseHoursField" layoutX="175.0" layoutY="95.0" prefWidth="200.0" />
+            <Button fx:id="addCourseButton" layoutX="96.0" layoutY="168.0" mnemonicParsing="false" onAction="#OnClickAddCourse" text="Add Course" />
+            <Button fx:id="listAvailableCoursesButton" layoutX="223.0" layoutY="168.0" mnemonicParsing="false" onAction="#OnClickListAvailableCourses" text="List Available Courses" />
+            <TitledPane animated="true" collapsible="false" layoutX="-2.0" layoutY="229.0" prefHeight="456.0" prefWidth="450.0" text="List of Available Courses">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="445.9998779296875" visible="true">
+                  <children>
+                    <TextArea fx:id="courseListArea" layoutX="-2.0" layoutY="-3.0" prefHeight="210.0" prefWidth="450.0" visible="true" wrapText="true" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" collapsible="false" layoutX="450.0" layoutY="0.0" prefHeight="482.0" prefWidth="386.0" text="Student">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="376.0">
+          <children>
+            <Label layoutX="46.0" layoutY="40.0" prefHeight="22.000099999997474" prefWidth="49.0" text="ID:" />
+            <Label layoutX="46.0" layoutY="97.0" text="Name:" />
+            <TextField fx:id="studentIdField" layoutX="152.0" layoutY="41.0" prefWidth="200.0" />
+            <TextField fx:id="studentNameField" layoutX="152.0" layoutY="91.0" prefWidth="200.0" />
+            <Label layoutX="46.0" layoutY="147.0" text="Course" />
+            <Button fx:id="addStudentWithCourseButton" layoutX="111.0" layoutY="218.0" mnemonicParsing="false" prefWidth="161.0" text="Add" />
+            <ComboBox fx:id="courseMenu" layoutX="152.0" layoutY="145.0" prefWidth="200.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" layoutX="835.0" layoutY="0.0" minWidth="386.0" prefHeight="482.0" prefWidth="386.0" text="Statistics">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="382.0">
+          <children>
+            <Button fx:id="statisticsButton" layoutX="66.0" layoutY="40.0" mnemonicParsing="false" onAction="#OnClickStatisticsButton" prefHeight="67.0" prefWidth="251.0" text="Statistics" />
+            <BarChart layoutX="0.0" layoutY="163.0" prefHeight="293.0" prefWidth="382.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

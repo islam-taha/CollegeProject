@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="0.0" mouseTransparent="false" pickOnBounds="true" prefHeight="400.0" prefWidth="600.0" visible="true">
+      <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Encryption-Decryption" />
+        <TextField fx:id="filePath" layoutX="14.0" layoutY="64.0" prefWidth="382.0" />
+        <TextField fx:id="keyValue" layoutX="14.0" layoutY="106.0" prefWidth="382.0" />
+        <TextArea fx:id="showFileArea" layoutX="14.0" layoutY="160.0" prefHeight="221.0" prefWidth="572.0" wrapText="true" />
+        <CheckBox fx:id="encBox" layoutX="14.0" layoutY="135.0" mnemonicParsing="false" onAction="#OnCheckEncrypt" text="Encrypt" />
+        <CheckBox fx:id="decBox" layoutX="313.0" layoutY="136.0" mnemonicParsing="false" onAction="#OnCheckDecrypt" text="Decrypt" />
+        <Button fx:id="browseButton" layoutX="403.0" layoutY="64.0" mnemonicParsing="false" onAction="#OnClickBrowse" text="Browse" />
+        <Label disable="false" layoutX="418.0" layoutY="112.0" text="Key" textAlignment="CENTER" textOverrun="ELLIPSIS" underline="false">
+          <effect>
+            <Glow />
+          </effect>
+        </Label>
+        <Button fx:id="encDecButton" layoutX="484.0" layoutY="41.0" mnemonicParsing="false" onAction="#OnClickEncDec" prefHeight="65.0" prefWidth="102.0" text="Dec. Or Enc." />
+        <Button fx:id="saveAsButton" layoutX="500.0" layoutY="117.0" mnemonicParsing="false" onAction="#OnClickSaveAs" text="Save As" />
+        <ProgressIndicator fx:id="encDecIndicator" layoutX="283.0" layoutY="251.0" progress="0.0" visible="false" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
